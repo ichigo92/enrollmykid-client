@@ -23,7 +23,6 @@ Dillinger uses a number of open source projects to work properly:
 
 * [Python] - HTML enhanced for web apps!
 * [Sublime] - awesome text editor
-* [markdown-it] - Markdown parser done right. Fast and easy to extend.
 * [Bootstrap] - great UI boilerplate for modern web apps
 
 
