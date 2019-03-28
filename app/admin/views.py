@@ -18,7 +18,10 @@ def dashboard():
 	url = base_url+'/centres'
 	centres = requests.get(url).json()
 
-	return render_template('admin/dashboard.html', centres = centres, title="Dashboard")
+	weather_url = base_url+'/weather'
+	weather = requests.get(url).json()
+
+	return render_template('admin/dashboard.html', centres = centres, weather=weather title="Dashboard")
 
 @admin.route('/dashboard/add', methods = ['GET', 'POST'])
 #@login_required

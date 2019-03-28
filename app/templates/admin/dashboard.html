@@ -9,6 +9,10 @@
         <br/>
         {{ utils.flashed_messages() }}
         <br/>
+        <p>{{weather.temperature}}</p>
+        <figure class="image is-50x50">
+            <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png" alt="Image">
+        </figure>
         <h1 style="text-align:center;">Childcare Centres</h1>
         {% if centres %}
           <hr class="intro-divider">
