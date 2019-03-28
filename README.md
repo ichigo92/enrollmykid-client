@@ -19,7 +19,7 @@ Markdown is a lightweight markup language based on the formatting conventions th
 
 ### Tech
 
-Dillinger uses a number of open source projects to work properly:
+Enrollmykid uses a number of open source projects to work properly:
 
 * [Python] - HTML enhanced for web apps!
 * [Sublime] - awesome text editor
@@ -28,7 +28,7 @@ Dillinger uses a number of open source projects to work properly:
 
 ### Installation
 
-Dillinger requires [Flask](http://flask.pocoo.org/) to run.
+Enrollmykid requires [Flask](http://flask.pocoo.org/) to run.
 
 Install the dependencies and devDependencies and start the server.
 
