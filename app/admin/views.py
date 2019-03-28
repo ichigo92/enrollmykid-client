@@ -19,7 +19,7 @@ def dashboard():
 	centres = requests.get(url).json()
 
 	weather_url = base_url+'/weather'
-	weather = requests.get(url).json()
+	weather = requests.get(weather_url).json()
 
 	return render_template('admin/dashboard.html', centres = centres, weather=weather title="Dashboard")
 
