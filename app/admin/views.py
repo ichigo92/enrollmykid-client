@@ -21,7 +21,7 @@ def dashboard():
 	weather_url = base_url+'/weather'
 	weather = requests.get(weather_url).json()
 
-	return render_template('admin/dashboard.html', centres = centres, weather=weather title="Dashboard")
+	return render_template('admin/dashboard.html', centres = centres, weather=weather, title="Dashboard")
 
 @admin.route('/dashboard/add', methods = ['GET', 'POST'])
 #@login_required
@@ -79,6 +79,7 @@ def edit_centre(id):
 	print(centre['service_approval_number'])
 
 	form = CentreForm(obj=centre)
+
 	if form.validate_on_submit():
 		centre['service_approval_number'] = form.serviceApprovalNumber.data
 		centre['provider_approval_number'] = form.providerApprovalNumber.data
@@ -99,6 +100,22 @@ def edit_centre(id):
 		flash('You have successfully edited the centre')
 
 		return redirect(url_for('admin.dashboard'))
+
+	form.serviceApprovalNumber.data = centre['service_approval_number']
+	form.providerApprovalNumber = centre['provider_approval_number']
+	form.serviceName = centre['service_name']
+	form.providerLegalName = centre['provider_legal_name']
+	form.serviceAddress = centre['service_address']
+	form.suburb = centre['suburb']
+	form.state = centre['state']
+	form.postcode = centre['postcode']
+	form.phone = centre['phone']
+	form.fax = centre['fax']
+	form.emailAddress = centre['email_address']
+	form.conditionsOnApproval = centre['conditions_on_approval']
+	form.numberOfApprovedPlaces = centre['number_of_approved_places']
+	form.overallRating = centre['overall_rating']
+	form.type = centre['type']
 
 	return render_template('admin/centre.html', action='Edit', add_centre=add_centre, form = form, centre = centre, title='Edit Centre')
 
