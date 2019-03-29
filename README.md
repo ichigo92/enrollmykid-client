@@ -2,7 +2,9 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-Enrollmykid is a cloud-enabled, mobile-ready, offline-storage, Python powered application
+Enrollmykid is a cloud-enabled, mobile-ready, Python powered application
+
+**Server** is available at [https://github.com/ichigo92/enrollmykid-client](https://github.com/ichigo92/enrollmykid-client)
 
 # Features!
 
@@ -15,7 +17,6 @@ Enrollmykid is a cloud-enabled, mobile-ready, offline-storage, Python powered ap
 You can also:
   - Export centre details as PDF (still in progress)
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
 
 ### Tech
 
@@ -34,7 +35,7 @@ Install the dependencies and devDependencies and start the server.
 
 ```sh
 $ cd enrollmykid-client
-$ pyton -m pip install -U -r requirements.txt
+$ python -m pip install -U -r requirements.txt
 $ python app.py
 ```
 
